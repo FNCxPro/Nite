@@ -35,7 +35,7 @@ module.exports = class WeatherCommand extends Command {
     const state = res.body.location.adminDistrictCode[0] || res.body.location.adminDistrict[0]
 
     const _nowcast = await snekfetch.get(`https://api.weather.com/v1/geocode/${lat}/${lng}/forecast/nowcast.json?language=en-US&apiKey=${key}`)
-    const _cc = await snekfetch.get(`https://api.weather.com/v1/geocode/${lat}/${lng}/observations/cuerrent.json?language=en-US&apiKey=${key}`)
+    const _cc = await snekfetch.get(`https://api.weather.com/v1/geocode/${lat}/${lng}/observations/current.json?language=en-US&apiKey=${key}`)
     const nowcast = _nowcast.body
     const cc = _cc.body
     const embed = api.success(nowcast.forecast.narrative_256char, msg.author)
