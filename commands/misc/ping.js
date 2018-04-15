@@ -18,7 +18,7 @@ module.exports = class PingCommand extends Command {
    * @param {CommandAPI} api - Command API
    */
   async run(args, msg, api) {
-    let embed = api.success(`🏓 Pong\nPing: ${api.handler.client.ping.toFixed(0)} ms`, msg.author)
+    let embed = api.success(`🏓 Ping\nPing: ${api.handler.client.ping.toFixed(0)} ms`, msg.author)
     return embed
   }
 }
