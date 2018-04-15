@@ -14,7 +14,8 @@ module.exports = class WeatherCommand extends Command {
         name: 'city',
         type: 'string',
         required: true,
-        description: 'City of where you want to get weather from'
+        description: 'City of where you want to get weather from',
+        multiword: true
       }],
       ownerOnly: false
     })
