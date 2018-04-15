@@ -40,7 +40,7 @@ module.exports = class WeatherCommand extends Command {
     const cc = _cc.body
     const embed = api.success(nowcast.forecast.narrative_256char, msg.author)
     let units = cc.metadata.units === 'e' ? 'F' : 'C'
-    let unitCode = cc.metadata.untis === 'e' ? 'imperial' : 'metric'
+    let unitCode = cc.metadata.units === 'e' ? 'imperial' : 'metric'
     embed.setTitle(`🌥 \`Weather for ${city}, ${state}\``)
     embed.setImage(`https://relative.pro/icons/${nowcast.forecast.icon_code.length === 1 ? '0'+nowcast.forecast.icon_code : nowcast.forecast.icon_code}.png`)
     embed.addField('Temperature', `${cc.observation[unitCode].temp.toString()} °${units}`)
