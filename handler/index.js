@@ -1,5 +1,5 @@
 const { Message, Client, User, GuildMember, Channel, TextChannel, DMChannel, Role, RichEmbed } = require('discord.js'),
-      { Colors, Emoji } = require('./constants'),
+      { Colors, Emoji } = require('./Constants'),
       errors = require('common-errors'),
       logger = require('../logger')
 

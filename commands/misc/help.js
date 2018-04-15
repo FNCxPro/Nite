@@ -1,6 +1,6 @@
 const { Command } = require('../../handler')
 const { RichEmbed } = require('discord.js')
-const { Colors } = require('../../handler/constants')
+const { Colors } = require('../../handler/Constants')
 
 module.exports = class HelpCommand extends Command {
   constructor() {
