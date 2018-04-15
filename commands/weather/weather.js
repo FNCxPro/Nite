@@ -42,10 +42,10 @@ module.exports = class WeatherCommand extends Command {
     let units = cc.metadata.units === 'e' ? 'F' : 'C'
     let unitCode = cc.metadata.units === 'e' ? 'imperial' : 'metric'
     embed.setTitle(`🌥 \`Weather for ${city}, ${state}\``)
-    embed.setImage(`https://relative.pro/icons/${nowcast.forecast.icon_code.length === 1 ? '0'+nowcast.forecast.icon_code : nowcast.forecast.icon_code}.png`)
-    embed.addField('Temperature', `${cc.observation[unitCode].temp.toString()} °${units}`)
-    embed.addField('Feels Like', `${cc.observation[unitCode].feels_like.toString()} °${units}`)
-    embed.addField('Wind', `${cc.observation[unitCode].wspd} ${units === 'F' ? 'MPH' : 'k/h'} ${cc.observation.wdir_cardinal}`)
+    embed.setThumbnail(`https://relative.pro/icons/${nowcast.forecast.icon_code.length === 1 ? '0'+nowcast.forecast.icon_code : nowcast.forecast.icon_code}.png`)
+    embed.addField('Temperature', `${cc.observation[unitCode].temp.toString()} °${units}`, true)
+    embed.addField('Feels Like', `${cc.observation[unitCode].feels_like.toString()} °${units}`, true)
+    embed.addField('Wind', `${cc.observation[unitCode].wspd} ${units === 'F' ? 'MPH' : 'k/h'} ${cc.observation.wdir_cardinal}`, true)
     return embed
   }
 }
