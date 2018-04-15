@@ -30,7 +30,7 @@ module.exports = class ColorCommand extends Command {
     color = color.toLowerCase()
     let dbRs = await db.r.table('roles').get(color).run()
     let roleId
-    if (typeof dbRs !== 'undefined') {
+    if (!!dbRs) {
       roleId = dbRs.roleId
     } else {
       const role = await msg.guild.createRole({
