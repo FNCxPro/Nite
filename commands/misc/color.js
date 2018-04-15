@@ -2,13 +2,14 @@ const { Command, CommandAPI } = require('../../handler')
 const { Message } = require('discord.js')
 const db = require('../../db')
 
-module.exports = class PingCommand extends Command {
+module.exports = class ColorCommand extends Command {
   constructor() {
-    super('ping', {
-      name: 'Ping',
-      description: 'Ping command',
+    super('color', {
+      name: 'Color',
+      description: 'Color command',
       module: 'misc',
       ownerOnly: false,
+      guildOnly: true,
       args: [{
         name: 'color',
         type: 'string',
