@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/FNCxPro/Spokes",
   "author": "Seth Stephens <relative@airmail.cc>",
-  "license": "MIT",
+  "license": "unlicensed",
   "scripts": {
     "start": "cross-env NODE_ENV=production node index.js"
   },
